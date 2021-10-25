@@ -1,0 +1,20 @@
+<html>
+    <body>
+        {% block content %}
+        <h1>Plz give Time format in 24 hr time </h1>
+                <form action="" method="post">
+                        {% csrf_token %}
+                        {% for field in form %}
+                        <div>
+                            {{ field.errors }}
+                            {{ field.label_tag }} {{ field }}
+                        </div>
+                        {% endfor %}
+                        <button type="submit" >Submit</button><br><br><br>
+                </form>
+                <div >
+                    <a  href="/app/logout">Logout</a>
+                </div>
+        {% endblock %}
+    </body>
+</html>

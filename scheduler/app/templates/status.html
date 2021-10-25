@@ -1,0 +1,20 @@
+<html>
+    <body>
+        {% block content %}
+               
+                        {% csrf_token %}
+                        <h6>IP&emsp;Hour&emsp;Minute&emsp;Second&emsp;Status</h6>
+                        <br>
+                        {% for field in form %}
+                        <div>
+                          {{ field.ip }}&emsp;{{ field.hour }}&emsp;{{ field.minute }}&emsp;{{ field.second }}&emsp;{{ field.status }}
+                        </div>
+                        {% endfor %}
+                       <h1> you need to refresh page to see current one</h1>
+               
+                <div >
+                    <a  href="/app/logout">LogOut</a>
+                </div>
+        {% endblock %}
+    </body>
+</html>
